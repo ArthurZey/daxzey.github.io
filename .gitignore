@@ -1,0 +1,11 @@
+# Build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby dependencies installed via bundler
+/vendor/bundle/
+
+# macOS cruft
+.DS_Store
