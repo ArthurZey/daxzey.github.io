@@ -325,3 +325,16 @@ function handleLightboxKeydown(event) {
     closeLightbox();
   }
 }
+
+const sections = document.querySelectorAll('.section');
+if (sections.length) {
+  sections.forEach((section) => {
+    if (section.querySelector('.back-to-top')) return;
+    const link = document.createElement('a');
+    link.href = '#page-top';
+    link.className = 'back-to-top';
+    link.setAttribute('aria-label', 'Back to top');
+    link.textContent = '↑ Top';
+    section.appendChild(link);
+  });
+}
