@@ -1,4 +1,5 @@
 const DUE_DATE = '2026-01-07';
+const PREGNANCY_WEEK_START = '2025-04-09';
 
 function getDaysUntil(dateString) {
   const today = new Date();
@@ -8,6 +9,12 @@ function getDaysUntil(dateString) {
 }
 
 const daysUntilLaunch = getDaysUntil(DUE_DATE);
+function getPregnancyWeek(startDateString) {
+  const today = new Date();
+  const start = new Date(startDateString);
+  const diff = today.getTime() - start.getTime();
+  return Math.max(Math.floor(diff / (1000 * 60 * 60 * 24 * 7)) + 1, 1);
+}
 
 const milestoneList = document.querySelector('.timeline');
 if (milestoneList) {
@@ -18,7 +25,21 @@ if (milestoneList) {
 
 const launchCounter = document.querySelector('[data-launch-count]');
 if (launchCounter) {
-  launchCounter.textContent = `T-minus ${daysUntilLaunch} days to launch!`;
+  if (daysUntilLaunch > 0) {
+    launchCounter.textContent = `T-minus ${daysUntilLaunch} days to launch!`;
+  } else {
+    launchCounter.remove();
+  }
+}
+
+const pregnancyWeekEl = document.querySelector('[data-pregnancy-week]');
+if (pregnancyWeekEl) {
+  if (daysUntilLaunch > 0) {
+    const weeks = getPregnancyWeek(PREGNANCY_WEEK_START);
+    pregnancyWeekEl.textContent = `(We're ${weeks} weeks pregnant!)`;
+  } else {
+    pregnancyWeekEl.remove();
+  }
 }
 
 const galleryFiltersWrap = document.querySelector('[data-gallery-filters]');
