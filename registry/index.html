@@ -4,7 +4,8 @@
     <script src="/assets/js/lock.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Photo Log | Dax Zey</title>
+    <title>Baby Dax Registry | Dax Zey</title>
+    <meta http-equiv="refresh" content="0; url=https://www.amazon.com/baby-reg/arthur-zey-january-2026-goshen/3GE4OM4DDWVZ1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,21 +17,28 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const url = 'https://www.amazon.com/baby-reg/arthur-zey-january-2026-goshen/3GE4OM4DDWVZ1';
+        try {
+          window.location.replace(url);
+        } catch (err) {
+          window.location.href = url;
+        }
+      });
+    </script>
   </head>
   <body>
     <header>
-      <h1>Photo Log</h1>
-      <p>
-        Moments big and small, from before conception to Dax's birth. Browse the latest ultrasound captures, maternity highlights, and the
-        newborn memories that will follow.
-      </p>
+      <h1>Baby Dax Registry</h1>
+      <p>We're redirecting you to our Amazon Baby Registry. If the jump fails, the details are below.</p>
       <nav class="site-nav" aria-label="Primary">
         <a class="site-nav__link" href="/">Home</a>
         <a class="site-nav__link" href="/story/">Story</a>
         <a class="site-nav__link" href="/plans/">Plans</a>
         <a class="site-nav__link" href="/name/">Name</a>
         <a class="site-nav__link" href="/eugenics/">Eugenics</a>
-        <a class="site-nav__link" href="/photos/" aria-current="page">Photos</a>
+        <a class="site-nav__link" href="/photos/">Photos</a>
         <a class="site-nav__link" href="/baby-shower/">Baby Shower</a>
         <a class="site-nav__link" href="https://www.amazon.com/baby-reg/arthur-zey-january-2026-goshen/3GE4OM4DDWVZ1" target="_blank" rel="noopener"
           >Registry
@@ -46,48 +54,22 @@
 
     <main>
       <section class="section">
-        <h2>Journey Album</h2>
+        <h2>Where to Find the Registry</h2>
         <p>
-          We maintain a live Google Photos album for the entire surrogacy adventure. Because it can't be embedded, pop it
-          open in a new tab to see everything in real time.
+          Our registry lives on Amazon so friends and family can follow along no matter where they're stationed in the
+          galaxy. If you're seeing this message, the automatic redirect didn't fire, but you can visit it manually here:
         </p>
         <p>
-          <a class="button-link" href="https://photos.app.goo.gl/37PjwG4f6yZmprdFA" target="_blank" rel="noopener"
-            >Open the Google Photos Album
-             <span class="site-nav__icon" aria-hidden="true">
-            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 3.5h5.5v5.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M5.5 11.5 12.5 4.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span></a
+          <a class="button-link" href="https://www.amazon.com/baby-reg/arthur-zey-january-2026-goshen/3GE4OM4DDWVZ1" target="_blank" rel="noopener"
+            >Open the Amazon Baby Registry</a
           >
         </p>
-      </section>
-
-      <section class="section">
-        <h2>Visual Mission Log</h2>
-        <p>
-          These highlights are fed from a JSON log we curate manually—perfect for pinning favorite ultrasound stills,
-          Kentucky snapshots, and future newborn smirks. Filters update automatically as new categories appear.
-        </p>
-        <div class="gallery-controls" data-gallery-filters></div>
-        <div class="gallery-grid" data-gallery-grid></div>
-        <p class="gallery-status" data-gallery-status>Loading photos from Starfleet archives…</p>
-      </section>
-
-      <section class="section">
-        <h2>Share the Love</h2>
-        <p>
-          Have a snapshot from a visit or message for Baby Dax? Send it our way so we can add it to the log and let the
-          story keep unfolding.
-        </p>
+        <p>Thank you for helping us prep the nursery for Baby Dax—every bit of support means the world.</p>
       </section>
     </main>
 
     <footer>
       Made with love for Baby Dax by <a href="https://zeyenterprises.com" target="_blank">Zey Enterprises, LLC</a> • We'll keep adding memories as he grows.
     </footer>
-
-    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>

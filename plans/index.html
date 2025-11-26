@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/assets/js/lock.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flight Plan | Dax Zey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+    <header>
+      <h1>Flight Plan</h1>
+      <p>
+        Apparently, you can't take newborn infants up to 9000 feet where we live in Bailey. A major detour wasn't in our original plans,
+        but you gotta expect that the universe will throw you at least a few curveballs with a kid!
+      </p>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav__link" href="/">Home</a>
+        <a class="site-nav__link" href="/story/">Story</a>
+        <a class="site-nav__link" href="/plans/" aria-current="page">Plans</a>
+        <a class="site-nav__link" href="/name/">Name</a>
+        <a class="site-nav__link" href="/eugenics/">Eugenics</a>
+        <a class="site-nav__link" href="/photos/">Photos</a>
+        <a class="site-nav__link" href="/baby-shower/">Baby Shower</a>
+        <a class="site-nav__link" href="https://www.amazon.com/baby-reg/arthur-zey-january-2026-goshen/3GE4OM4DDWVZ1" target="_blank" rel="noopener"
+          >Registry
+          <span class="site-nav__icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 3.5h5.5v5.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.5 11.5 12.5 4.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>Provisional Timeline</h2>
+        <p>
+          <strong>December 2025:</strong> Arthur will drive the zoo (Max, Thor, and Murrby) to Kentucky in early December
+          with a car-load of things we need for everyday life, making a pitstop by Chicago to pick up some baby gear from
+          his siter Emily. Chase will follow by plane in late December after finishing teaching the fall semester. We'll
+          get our short-term rental all prepared for Dax's arrival over Christmas and the New Year.
+        </p>
+        <p>
+          <strong>January - February 2026:</strong> We expect Dax to be born in Louisville, and we'll keep him there for a
+          few months to build up his immune system and get settled as a new human being before putting him through the
+          stress of cross-country travel.
+        </p>
+        <p>
+          <strong>March - August 2026:</strong> Arthur will fly with Dax to Tarzana, California to stay with his parents,
+          Igor and Masha. Chase will follow by car with the zoo, stopping in Colorado first for some ice climbing before
+          continuing on to California. We'll invite family and friends to a California <a href="/baby-shower/">baby
+          shower</a> once we're all settled.
+        </p>
+        <p>
+          <strong>September - October 2026:</strong> We'll pack up once more and transition to Colorado's intermediate
+          elevations in the 4000-6000-ft range, to give Dax a chance to acclimate to higher elevation more gradually.
+          Meanwhile, the Cades will have moved out of the main house, and we'll get that space ready for us to move in.
+        </p>
+        <p>
+          <strong>November 2026:</strong> We'll finally return home to Bailey at 9000 feet, hopefully with a well-adjusted
+          and acclimated Dax, ready to thrive in the high country. We'll start setting up our Montessori schoolroom in
+          earnest.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Science Driving the Plan</h2>
+        <p>
+          The most robust study that we have on this (Wehby's 2012 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3556200/" target="_blank">Living at higher grounds
+          reduces child neurodevelopment: Evidence from South America</a>) quantified the neurodevelopmental impact of
+          relatively hypoxic environments in IQ points. When a child spends his first two years at a certain elevation,
+          we can expect a penalty of ~0.45-0.5 IQ points for every 1000 feet of elevation. 4.5 IQ points seemed like too
+          much of a penalty, and there's nothing mysterious about the biological mechanism here:
+        </p>
+        <ul>
+          <li>infants do not increase their respiratory rate in response to a relatively hypoxic environment,</li>
+          <li>they do not produce more hemoglobin to adapt to elevation the way adults can, and</li>
+          <li>the oxygen affinity of their hemoglobin is less robust than that of adults'.</li>
+        </ul>
+        <p>
+          Now, applying the learnings of the study to our context required a few extrapolations and assumptions:
+        </p>
+        <p>
+          The study involved women who gestated at the studied elevations, whereas Jessie is close to sea level. However,
+          subsequent research suggested that that's actually <i>worse</i> than the study's implication, so ~4.5 IQ points
+          would be a lower bound on the neurodevelopmental penalty. The reason is that women who gestate at higher
+          elevations have physiological adaptations that confer some protection to their infants, and we wouldn't have even
+          that. So we're taking this quite seriously.
+        </p>
+        <p>
+          Next, we had to figure out how to model this for different scenarios. Many biological phenomena follow
+          exponential/logarithmic functions, so it's not like there's a constant neurodevelopmental effect for 2 years that
+          then suddenly drops to 0 at 24 months. So, with the help of ChatGPT, we drew a few curves that start with a high
+          effect and taper off to 0 by 24 months, but the area under the curve, representing the IQ point penalty, sums to
+          the effects observed in the study.
+        </p>
+        <figure>
+          <img src="/assets/images/elevation-impact-modeling.jpg" alt="Chart showing IQ impact of different elevation plans" />
+          <!--<figcaption>Modeling the cumulative IQ impact of various relocation timelines (0-24 months).</figcaption>-->
+        </figure>
+        <p>
+          Each line represents a different plan, with the IQ penalty being the area under the curve:
+        </p>
+        <ul>
+          <li>The gray line represents the baseline of staying at sea level for 2 years, which equates to 0 IQ penalty.</li>
+          <li>The red line represents the extreme case of going to 9000 feet elevation immediately after birth, which equates to a 4.57 IQ penalty.</li>
+          <li>The dotted brown line represents going to ~5k elevation.</li>
+          <li>The green line was our original plan of staying at sea level for 3 months, followed by 1 month at ~5k elevation for acclimation, then returning home, ultimately equating to a 2.91 IQ penalty.</li>
+          <li>The blue line represents our final plan of staying at sea level for 8 months, followed by 2 months at ~5k elevation for acclimation, then returning home, ultimately equating to a 1.38 IQ penalty.</li>
+        </ul>
+        <p>
+          You can see how we're jumping from one line to the next with different shifts in elevation at different times.
+          The equivalent of 1.38 IQ points seems more like a rounding error, and that seems like a tolerable risk, even
+          if it's a lower bound.
+        </p>
+        <p>
+          Incidentally, we did speak to several pediatricians about this matter; some seemed to think this wasn't a
+          significant issue, and others seemed to think it might be even more serious than we're estimating. In general,
+          though, our concern is that, in our culture's approach to health, most doctors are oriented toward avoiding
+          adverse outcomes that cross clinical thresholds, even in so-called "preventative care". But we're not merely
+          trying to avoid a diagnosis of "developmentally delayed"--we're trying to create the most supportive
+          developmental environment that's reasonably practical. I doubt that many pediatricians, in their clinical
+          experience, have been able to observe 5-IQ-point swings correlating with time spent at elevation, so the most
+          that they can assure us is that most term babies do okay at elevation and that if they seem to struggle,
+          they can get some supplemental oxygen...but they're not terribly concerned with the sort of subtle, subclinical,
+          continuous biological effects of hypoxia on neurodevelopment.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Overthinking It?</h2>
+        <p>
+          Obviously, it's possible for us to stress and agonize so much over trying to optimize every detail that we lose
+          sight of the bigger picture and unwittingly do indirect harm to Dax through setting up a frantic, anxious
+          environment. For those who know him well (or even a little!), Arthur's neuroticism clearly makes him especially
+          susceptible to that failure mode, ironically achieving the opposite of what's intended.
+        </p>
+        <p>
+          We are trying to be very mindful and aware of these dynamics, and it's part of why we're trying to set ourselves
+          up for success now: When Dax arrives, we'll be too delirious from sleep exhaustion to be able to effectively
+          navigate complex scientific questions, so we're doing as much preparation and planning now, so that when we
+          inevitably get thrown some curveballs, we'll have already considered various options and alternatives and will
+          be able to adapt more nimbly. As they say, "Planning is everything, and plans are nothing.", and so front-loading
+          all this stress will give us our best shot at being able to deal with challenges (and just normal life) with some
+          amount of peace and equanimity!
+        </p>
+        <p>
+          Do we love the idea of being away from home for 9 months? No. Do we love the idea of moving to Kentucky, then to
+          California, then to another city in Colorado, and then finally home? Obviously not. But we'll do our best to take
+          it all in stride and think of it as a grand adventure, all in service of doing the best we can for Dax. And we're
+          fortunate that we are able to do this--not all parents have the flexibility and life circumstances to support this
+          kind of adventure!
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Our Approach to Parenting</h2>
+        <ul class="story-list">
+          <li><strong>Fostering Independence</strong>: We believe children become truly independent when they first experience themselves as capable, respected individuals. Drawing from Montessori and RIE, we aim to provide a prepared environment that supports freedom within clear, consistent boundaries: an environment that communicates "You can do this.". Independence isn't forced; it's cultivated through trust in the child's intrinsic motivation, ample opportunities for mastery, and an adult presence that guides without overstepping, all based on careful observation and individualized course-correction to respect the child's development. In this approach, willfulness is not a flaw to be corrected, but an early expression of volition, agency, and selfhood--a spark we want to nurture, not extinguish. (And anyway, between Arthur's and Brit's genetics, Dax is likely to be quite willful regardless, so why fight nature?)</li>
+          <li><strong>Inherent Goodness</strong>: Our parenting rests on the conviction--echoed across RIE, Attachment Parenting, Nonviolent Communication, and Brené Brown's works--that people (and especially children) are basically good, curious, and wired for connection. They do not manipulate; they communicate. Their behaviors are expressions of needs, not moral failings. If anything, it's the behaviors that are bad, unhelpful, maladaptive, or undesirable--but the child is never bad.Approaching our child with fundamental trust allows us to respond with clarity and compassion, rather than fear or shame. This perspective frames discipline not as punishment or a thing you do to a child, but as something you help a child to develop for themselves through effective guidance and relationship-building. Our job is to help Dax stay rooted in the truth of his inherent goodness, even when he struggles.</li>
+          <li><strong>Integration of Intellect, Body, and Spirit</strong>: We want Dax to develop as a whole human: thinking clearly, feeling deeply, and moving confidently in his body. Montessori emphasizes the unity of mind and movement; RIE encourages uninterrupted exploration and authentic expression; and many other schools of thought highlight the integration of emotional and logical systems. For us, that integration is deeply philosophical: the alignment of reason, emotion, and purposeful action through a capable, strong body. We want Dax to experience his mind and body not as competing domains, but as harmonious, interconnected tools for navigating and experiencing the world. This holistic development supports not just competence, but joy, presence, and a grounded sense of self.</li>
+          <li><strong>The Value of the Great Outdoors</strong>: Nature offers something no traditional classroom can replicate: a vast, unstructured world that invites curiosity, resilience, and awe. For a child growing up in Colorado, the outdoors becomes both playground and teacher. From a Montessori perspective, nature supports independence, concentration, and sensory refinement; from an attachment perspective, shared adventures strengthen connection; and from a philosophical perspective, nature fosters agency, competence, and reverence for reality. We want Dax to hike, build, dig, climb, and wander (okay, and hopefully to also ski or snowboard!)--to feel the rhythms of seasons, the texture of earth, and the confidence that comes from engaging with the real world directly.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      Made with love for Baby Dax by <a href="https://zeyenterprises.com" target="_blank">Zey Enterprises, LLC</a> • We'll keep adding memories as he grows.
+    </footer>
+  </body>
+</html>
