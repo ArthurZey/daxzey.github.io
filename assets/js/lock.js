@@ -70,6 +70,7 @@ function showError(message) {
 
   window.addEventListener('DOMContentLoaded', () => {
     const overlay = renderLock();
+    document.body.classList.add('lock-active');
     const form = document.getElementById(`${LOCK_ID}-form`);
     const input = document.getElementById(`${LOCK_ID}-input`);
     const lockoutBlock = document.getElementById(`${LOCK_ID}-lockout`);
@@ -88,6 +89,7 @@ function showError(message) {
         setCookie();
         overlay.remove();
         ensureVisibility();
+        document.body.classList.remove('lock-active');
       } else {
         attempts += 1;
         if (attempts >= MAX_ATTEMPTS) {
