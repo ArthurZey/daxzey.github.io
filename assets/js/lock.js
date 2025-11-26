@@ -4,12 +4,12 @@ const PASSWORD_HASH =
 const MAX_ATTEMPTS = 3;
 const COOKIE_NAME = 'daxAccess';
 const LOCK_ID = 'access-lock';
-const LOCKOUT_REDIRECT = 'https://en.wikipedia.org/wiki/Jadzia_Dax';
+const LOCKOUT_REDIRECT = 'https://memory-alpha.fandom.com/wiki/Jadzia_Dax';
 
 const template = `
   <div class="lock-overlay">
     <div class="lock-panel">
-      <h2>Family Access</h2>
+      <h2>Family and Friends Access</h2>
       <p>Enter the shared password to continue.</p>
       <form id="${LOCK_ID}-form">
         <input type="password" id="${LOCK_ID}-input" autocomplete="current-password" placeholder="Password" required />
@@ -18,7 +18,7 @@ const template = `
       <p class="lock-error" id="${LOCK_ID}-error"></p>
       <div class="lock-lockout" id="${LOCK_ID}-lockout" hidden>
         <p>
-          Too many attempts. Please contact <a href="mailto:arthur@deltawerx.com">Arthur Zey</a> for access.
+          Too many attempts. Please contact <a href="mailto:arthur@deltawerx.com">Arthur Zey</a> or <a href="mailto:chasep0191@gmail.com">Chase Popp</a> for access.
         </p>
         <button type="button" id="${LOCK_ID}-lockout-btn">Okay</button>
       </div>
