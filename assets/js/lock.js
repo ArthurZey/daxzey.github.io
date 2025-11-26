@@ -18,7 +18,7 @@ const template = `
       <p class="lock-error" id="${LOCK_ID}-error"></p>
       <div class="lock-lockout" id="${LOCK_ID}-lockout" hidden>
         <p>
-          Too many attempts. Please contact <a href="mailto:arthur@deltawerx.com">Arthur Zey</a> or <a href="mailto:chasep0191@gmail.com">Chase Popp</a> for access.
+          Too many attempts. Please contact<br /><a href="mailto:arthur@deltawerx.com">Arthur Zey</a> or <a href="mailto:chasep0191@gmail.com">Chase Popp</a> for access.
         </p>
         <button type="button" id="${LOCK_ID}-lockout-btn">Okay</button>
       </div>
