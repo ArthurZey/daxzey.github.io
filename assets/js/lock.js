@@ -1,5 +1,11 @@
-const PASSWORD_HASH =
-  '3142d2bd7fdad44583bb047ee63e40403171c3ba3582aed5d8b995ee94e0a96d'; // output from `echo -n "MyPass" | shasum -a 256`
+const PASSWORD_HASHES = [
+  '3142d2bd7fdad44583bb047ee63e40403171c3ba3582aed5d8b995ee94e0a96d', // output from `echo -n "MyPass" | shasum -a 256`
+  '5ae05906a27120b7a6157dee71ad63956a4ddc631fcf18a79e4f682bd49c421a', // without symbol
+  'e1be447d69eada044f6d2881a541886f4ded962a78baa707e9cb3b02b3147202', // all lowercase
+  '290bb3aad7cda9d661d4e6cee83dfe24c3c2c5b5f1f8a5ed7719f8f39340469f', // all lowercase with symbol
+  '0fa96c70cc78b01e6c5fb6c851f84a38a96979a4d540b8260efec05361a147ef', // all uppercase
+  'a5deffd2224f41a647d4855f24652d607c562a6da09b535c97e8f5b04b9b0e49'  // all uppercase with symbol
+];
 
 const MAX_ATTEMPTS = 3;
 const COOKIE_NAME = 'daxAccess';
@@ -85,7 +91,7 @@ function showError(message) {
       const pwd = input.value.trim();
       const hash = await hashString(pwd);
 
-      if (hash === PASSWORD_HASH) {
+      if (PASSWORD_HASHES.includes(hash)) {
         setCookie();
         overlay.remove();
         ensureVisibility();
