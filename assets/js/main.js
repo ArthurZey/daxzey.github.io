@@ -1,4 +1,4 @@
-const DUE_DATE = '2026-01-07';
+const DUE_DATE = '2026-01-01';
 const PREGNANCY_WEEK_START = '2025-04-09';
 
 function getDaysUntil(dateString) {
