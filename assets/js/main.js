@@ -4,7 +4,7 @@ const PREGNANCY_WEEK_START = '2025-04-09';
 function getDaysUntil(dateString) {
   const today = new Date();
   const targetDate = new Date(dateString);
-  const diff = targetDate.getTime() - today.getTime();
+  const diff = targetDate.getTime() - today.getTime() + (1000 * 60 * 60 * 24); // add extra day to count today
   return Math.max(Math.round(diff / (1000 * 60 * 60 * 24)), 0);
 }
 
