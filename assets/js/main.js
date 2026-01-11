@@ -359,3 +359,31 @@ if (sections.length) {
     section.appendChild(link);
   });
 }
+
+function initChartScaling() {
+  const embeds = document.querySelectorAll('.chart-embed');
+  if (!embeds.length) return;
+
+  const updateScale = () => {
+    embeds.forEach((embed) => {
+      const targetWidth = parseFloat(embed.dataset.chartWidth);
+      const targetHeight = parseFloat(embed.dataset.chartHeight);
+      if (!targetWidth || !targetHeight) {
+        embed.style.setProperty('--chart-scale', 1);
+        return;
+      }
+
+      const styles = window.getComputedStyle(embed);
+      const padding =
+        parseFloat(styles.paddingLeft || '0') + parseFloat(styles.paddingRight || '0');
+      const availableWidth = Math.max(embed.clientWidth - padding, 0);
+      const scale = Math.min(1, availableWidth / targetWidth);
+      embed.style.setProperty('--chart-scale', scale > 0 ? scale : 1);
+    });
+  };
+
+  updateScale();
+  window.addEventListener('resize', updateScale);
+}
+
+initChartScaling();

@@ -136,6 +136,11 @@ main {
   padding-bottom: 3.5rem;
 }
 
+.section--wide {
+  max-width: 1100px;
+  overflow: visible;
+}
+
 .section h2 {
   font-family: var(--serif);
   font-size: 2.1rem;
@@ -654,7 +659,42 @@ body.lock-active {
   color: #4b4f6b;
 }
 
+.chart-embed {
+  margin: 1.5rem auto 0;
+  border-radius: 32px;
+  box-shadow: 0 25px 60px rgba(4, 9, 24, 0.25);
+  background: #fff;
+  width: min(var(--chart-width, 1800px), calc(100vw - var(--chart-edge, 4rem)));
+  padding: 1rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  --chart-scale: 1;
+}
+
+.chart-embed__frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  width: calc(var(--chart-width, 1800px) * var(--chart-scale));
+  height: calc(var(--chart-height, 900px) * var(--chart-scale));
+}
+
+.chart-embed iframe {
+  width: var(--chart-width, 1800px);
+  height: var(--chart-height, 900px);
+  border: 0;
+  transform-origin: top left;
+  transform: scale(var(--chart-scale));
+}
+
 @media (max-width: 640px) {
+  .chart-embed {
+    width: calc(100vw - 1.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .site-nav {
     width: calc(100% - 1.5rem);
     border-radius: 32px;
