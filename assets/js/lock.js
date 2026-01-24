@@ -4,7 +4,13 @@ const PASSWORD_HASHES = [
   'e1be447d69eada044f6d2881a541886f4ded962a78baa707e9cb3b02b3147202', // all lowercase
   '290bb3aad7cda9d661d4e6cee83dfe24c3c2c5b5f1f8a5ed7719f8f39340469f', // all lowercase with symbol
   '0fa96c70cc78b01e6c5fb6c851f84a38a96979a4d540b8260efec05361a147ef', // all uppercase
-  'a5deffd2224f41a647d4855f24652d607c562a6da09b535c97e8f5b04b9b0e49'  // all uppercase with symbol
+  'a5deffd2224f41a647d4855f24652d607c562a6da09b535c97e8f5b04b9b0e49', // all uppercase with symbol
+  'd238d50b9214b7958ecbae79019f57145e841ab262fe8078852d89a2f0c0f00a', // variant word
+  '9252f6e22efda301a14e5ef35064c32641bcae88e1c3b83596af5cc29e17e9a1', // variant word without symbol
+  '3497aaafbe20278a74fc564581dc890c3240d14613537cd0010d0fc50885e37e', // variant word all lowercase with symbol
+  'c79d5ca21b83363e74edd13bae16097b8336b1586fac54c77e0486153f28de99', // variant word all lowercase without symbol
+  '7276c97a378cf04b545f177cda32fda7b9ec76bc7c9b7f581a6205ec9968aa0f', // variant word all uppercase with symbol
+  'ca5c07b07b448a1204b79cb010f2f8a6051ebec607f57772b8cc6e9bed1367a5'  // variant word all uppercase without symbol
 ];
 
 const MAX_ATTEMPTS = 3;
