@@ -50,6 +50,20 @@ function setCookie() {
   document.cookie = `${COOKIE_NAME}=1; max-age=604800; path=/`;
 }
 
+function getQueryPassword() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('pw') || params.get('password');
+}
+
+function stripQueryPassword() {
+  const url = new URL(window.location.href);
+  if (url.searchParams.has('pw') || url.searchParams.has('password')) {
+    url.searchParams.delete('pw');
+    url.searchParams.delete('password');
+    history.replaceState(null, '', url.toString());
+  }
+}
+
 async function hashString(value) {
   const data = new TextEncoder().encode(value);
   const digest = await crypto.subtle.digest('SHA-256', data);
@@ -74,13 +88,27 @@ function showError(message) {
 
 (function initLock() {
   if (getCookie()) {
+    stripQueryPassword();
     ensureVisibility();
     return;
   }
 
   document.documentElement.style.visibility = 'hidden';
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', async () => {
+    const queryPassword = getQueryPassword();
+    if (queryPassword) {
+      const queryHash = await hashString(queryPassword);
+      if (PASSWORD_HASHES.includes(queryHash)) {
+        setCookie();
+        stripQueryPassword();
+        ensureVisibility();
+        document.body.classList.remove('lock-active');
+        return;
+      }
+      stripQueryPassword();
+    }
+
     const overlay = renderLock();
     document.body.classList.add('lock-active');
     const form = document.getElementById(`${LOCK_ID}-form`);
@@ -91,6 +119,10 @@ function showError(message) {
       lockoutBlock.hidden = true;
     }
     let attempts = 0;
+    if (queryPassword) {
+      attempts = 1;
+      showError('Incorrect password. Try again.');
+    }
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
